@@ -1,0 +1,148 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
+
+.main-m-w {
+  max-width: 1640px;
+  padding: 0 30px;
+  margin: 0 auto; }
+
+.main-baner {
+  background-image: url(../img/maner.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; }
+  .main-baner__lines .ll {
+    position: relative; }
+  .main-baner__lines__line {
+    position: absolute;
+    height: 950px;
+    width: 1px;
+    top: 0;
+    background: rgba(255, 255, 255, 0.1); }
+    .main-baner__lines__line__in-line {
+      position: absolute;
+      height: 118px;
+      width: 19px;
+      left: 0;
+      transform: translateX(calc(-50% + 0.5px)); }
+      .main-baner__lines__line__in-line.for-top-1 {
+        top: 670px; }
+      .main-baner__lines__line__in-line.for-top-2 {
+        top: 90px; }
+      .main-baner__lines__line__in-line.for-top-3 {
+        top: 710px; }
+      .main-baner__lines__line__in-line.for-top-4 {
+        top: 190px; }
+      .main-baner__lines__line__in-line.for-top-5 {
+        top: 700px; }
+    .main-baner__lines__line--line-1 {
+      left: 0; }
+    .main-baner__lines__line--line-2 {
+      left: 330px; }
+    .main-baner__lines__line--line-3 {
+      left: 660px; }
+  .main-baner__nav {
+    position: relative;
+    z-index: 20;
+    margin-bottom: 150px; }
+    .main-baner__nav__flex {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 28px;
+      align-items: center; }
+  .main-baner__cont {
+    padding-bottom: 200px;
+    position: relative;
+    z-index: 20; }
+    .main-baner__cont__item h1, .main-baner__cont__item h2, .main-baner__cont__item h3, .main-baner__cont__item h4, .main-baner__cont__item h5, .main-baner__cont__item h6 {
+      font-weight: 700;
+      color: #fff;
+      font-size: 48px;
+      text-transform: uppercase;
+      margin-bottom: 25px; }
+      .main-baner__cont__item h1 span, .main-baner__cont__item h2 span, .main-baner__cont__item h3 span, .main-baner__cont__item h4 span, .main-baner__cont__item h5 span, .main-baner__cont__item h6 span {
+        font-size: 30px;
+        display: block; }
+    .main-baner__cont__item__pink {
+      background: #ff5dca;
+      position: relative;
+      transform: skewX(-45deg);
+      padding: 40px 0;
+      max-width: 430px;
+      margin-bottom: 60px;
+      display: flex; }
+      .main-baner__cont__item__pink:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3000px;
+        height: 100%;
+        background: #ff5dca;
+        top: 0;
+        right: calc(100% - 5px); }
+      .main-baner__cont__item__pink span {
+        position: relative;
+        transform: skewX(45deg);
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 700;
+        color: #fff;
+        z-index: 10; }
+    .main-baner__cont__item__dont-care {
+      font-size: 18px;
+      color: #fff; }
+      .main-baner__cont__item__dont-care span {
+        color: #ff5dca; }
+      .main-baner__cont__item__dont-care__item {
+        display: flex; }
+        .main-baner__cont__item__dont-care__item p {
+          width: 330px;
+          padding-left: 10px;
+          border-left: 4px solid #ff5dca;
+          color: #fff;
+          margin-bottom: 0; }
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .menu__list__item {
+    padding: 0 17.5px; }
+    .menu__list__item__link {
+      cursor: pointer;
+      color: #fff; }
+
+.telephones {
+  width: 350px; }
+  .telephones__item--mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .telephones__item--bott {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    right: -8px;
+    padding-top: 5px; }
+  .telephones__item__text {
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff; }
+  .telephones__item__tel {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700; }
+  .telephones__item__soc {
+    max-width: 30px;
+    display: block;
+    padding: 0 8px; }
+
+/*# sourceMappingURL=style.css.map */

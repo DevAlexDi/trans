@@ -1,0 +1,207 @@
+$r: 400;
+$b: 700;
+$main_color: #ff5dca;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $r;
+}
+.main-m-w{
+    max-width: 1640px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.main-baner{
+    background-image: url(../img/maner.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    &__lines{
+        .ll{
+            position: relative;
+        }
+        &__line{
+            position: absolute;
+            height: 950px;
+            width: 1px;
+            top: 0;
+            background: rgba(255,255,255,0.1);
+            &__in-line{
+                position: absolute;
+                height: 118px;
+                width: 19px;
+                left: 0;
+                transform: translateX(calc(-50% + 0.5px));
+                &.for-top-1{
+                    top: 670px;
+                }
+                &.for-top-2{
+                    top: 90px;
+                }
+                &.for-top-3{
+                    top: 710px;
+                }
+                &.for-top-4{
+                    top: 190px;
+                }
+                &.for-top-5{
+                    top: 700px;
+                }
+            }
+            &--line-1{
+                left: 0;
+            }
+            &--line-2{
+                left: 330px;
+            }
+            &--line-3{
+                left: 660px;
+            }
+        }
+    }
+    &__nav{
+        position: relative;
+        z-index: 20;
+        margin-bottom: 150px;
+        &__flex{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 28px;
+            align-items: center;
+        }
+    }
+    &__cont{
+        padding-bottom: 200px;
+        position: relative;
+        z-index: 20;
+        &__item{
+            h1,h2,h3,h4,h5,h6{
+                font-weight: $b;
+                color: #fff;
+                font-size: 48px;
+                text-transform: uppercase;
+                margin-bottom: 25px;
+                span{
+                    font-size: 30px;
+                    display: block;
+                }
+            }
+            &__pink{
+                background: rgba(255,93,202,1);
+                position: relative;
+                transform: skewX(-45deg);
+                padding: 40px 0;
+                max-width: 430px;
+                margin-bottom: 60px;
+                display: flex;
+                &:before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 3000px;
+                    height: 100%;
+                    background: rgba(255,93,202,1);
+                    top: 0;
+                    right: calc(100% - 5px);
+                }
+                span{
+                    position: relative;
+                     transform: skewX(45deg);
+                    color: #fff;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    font-weight: $b;
+                    color: #fff;
+                    z-index: 10;
+                    
+                }
+            }
+            &__dont-care{
+                font-size: 18px;
+                color: #fff;
+                span{
+                    color: $main_color;
+                }
+                &__item{
+                    display: flex;
+                    p{
+                        width: 330px;
+                        padding-left: 10px;
+                        border-left: 4px solid $main_color;
+                        color: #fff;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.menu{
+    &__list{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &__item{
+            padding: 0 17.5px;
+            &__link{
+                cursor: pointer;
+                color: #fff;
+                
+            }
+        }
+    }
+}
+.telephones{
+    width:350px;
+    &__item{
+        &--mid{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        &--bott{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            right: -8px;
+            padding-top: 5px;
+        }
+        
+        &__text{
+              cursor: pointer;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #fff;
+            
+        }
+        &__tel{
+            color: #fff;
+            font-size: 18px;
+            font-weight: $b;
+        }
+        &__soc{
+            max-width: 30px;
+            display: block;
+            padding: 0 8px;
+           
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
