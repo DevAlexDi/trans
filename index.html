@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet"> 
     
@@ -126,23 +127,120 @@
     </section>
     <section class="sec-style">
         <div class="main-m-w">
-            <h3>Выберите нужное <span>направление</span></h3>
-            <div class="flex-form">
-                <form class="flex-form__side">
-                    <div class="groupe-form">
-                        <p class="groupe-form__head">Откуда:</p>
-                        <select class="groupe-form__select" name="sity">
-                            <option value="dn">Донецк</option>
-                            <option value="rostov">Ростов-на-дону</option>
-                        </select>
+            <h3 class="zag">Выберите нужное <span>направление</span></h3>
+            <form class="flex-form">
+                <div class="flex-form__side flex-form__side--first">
+                    <div class="uniq-row">
+                        <div class="groupe-form__side">
+                            <div class="groupe-form">
+                                <p class="groupe-form__head">Откуда:</p>
+                                <select class="groupe-form__select" id="first-sel" name="sity" >
+                                    <option value="0">Донецк</option>
+                                    <option value="1">Ростов-на-дону</option>
+                                </select>
+                            </div>
+                        
+                        </div>
+                         <div class="swipe">
+                            <img src="img/swipe-val.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="groupe-form__side">
+                            <div class="groupe-form">
+                            <p class="groupe-form__head">Куда:</p>
+                                <select class="groupe-form__select" id="second-sel" name="sity-2">
+                                    <option value="0">Донецк</option>
+                                    <option value="1" selected>Ростов-на-дону</option>
+
+                                </select>
+                            </div>
+                        
+                        </div>
                     </div>
-                    <div class="groupe-form">
-                        <p class="groupe-form__head">ФИО</p>
-                        <input class="groupe-form__input" type="text" placeholder="Введите данные">
+                    <div class="groupe-form__side">
+                        
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">ФИО</p>
+                            <input class="groupe-form__input" type="text" placeholder="Введите данные">
+                        </div>
+                    </div>
+                   
+                    <div class="groupe-form__side">
+                        
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">Телефон</p>
+                            <input class="groupe-form__input" type="text" placeholder="+">
+                        </div>
                     </div>
                     
-                </form>
-            </div>
+                    
+                </div>
+                <div class="flex-form__side flex-form__side--second">
+                    <div class="groupe-form__side">
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">Дата</p>
+                            <input class="groupe-form__input date-inp-init" type="text" >
+                            
+                        </div>
+                        <div class="groupe-form for-hide hidden">
+                            <p class="groupe-form__head">Дата обратно</p>
+                            <input class="groupe-form__input date-inp-init" type="text" >
+                            
+                        </div>
+                        <div class="one-checkbox one-checkbox--more-padd">
+                            <div class="check-style">
+                                <input type="checkbox" class="checkbox" name="" id="checkbox-1">
+                                <label for="checkbox-1"></label>
+                            </div>
+                            <p>Пеший переход границы</p>
+                        </div>
+                    </div>
+                    <div class="groupe-form__side">
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">Количество мест:</p>
+                            <select class="groupe-form__select" id="count-pass" name="count">
+                                <option value="">1 пассажир</option>
+                                <option value="">2 пассажира</option>
+                            </select>
+                        </div>
+                        <div class="groupe-form for-hide hidden">
+                            <p class="groupe-form__head">Количество мест обратно:</p>
+                            <select class="groupe-form__select" id="count-pass-2" name="count-2">
+                                <option value="">1 пассажир</option>
+                                <option value="">2 пассажира</option>
+                            </select>
+                        </div>
+                        <div class="one-checkbox one-checkbox--more-padd">
+                            <div class="check-style">
+                                <input type="checkbox" class="checkbox" name="" id="checkbox-2">
+                                <label for="checkbox-2"></label>
+                            </div>
+                            <p>Бронь билета в обе стороны</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-form__side flex-form__side--submit">
+                    <div class="image">
+                        
+                    </div>
+                    <div class="flex-check">
+                        <div class="one-checkbox">
+                            <div class="check-style">
+                                <input class="type-car" type="checkbox" checked class="checkbox" name="" id="checkbox-3">
+                                <label for="checkbox-3"></label>
+                            </div>
+                            <p>Легковой автомобиль</p>
+                        </div>
+                        <div class="one-checkbox">
+                            <div class="check-style">
+                                <input class="type-car" type="checkbox" class="checkbox" name="" id="checkbox-4">
+                                <label for="checkbox-4"></label>
+                            </div>
+                            <p>Микроавтобус</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="send-form but">Найти рейсы</button>
+                </div>
+            </form>
         </div>
     </section>
     <section class="special_form_sec">
@@ -442,6 +540,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scripts.js"></script>
    
 </body>

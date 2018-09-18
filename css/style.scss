@@ -443,6 +443,209 @@ body{
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.sec-style{
+    padding: 55px 0;
+}
+.flex-form{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    &__side{
+        width: 40%;
+        &--first{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+            .uniq-row{
+                width: 100%;
+                display: flex;
+            justify-content: space-between;
+            }
+        }
+        &--second{
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+        }
+        &--submit{
+            width: 100%;
+            max-width: 305px;
+            .image{
+                height: 60px;
+                margin-bottom: 15px;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-image: url(../img/car-car.jpg);
+            }
+        }
+    }
+}
+.flex-check{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.send-form{
+    width: 100%;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 7px 0;
+    margin: auto;
+}
+.flex-form__side{
+    .swipe{
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #e8e8e8;
+    }
+    .groupe-form__side{
+        width: 100%;
+        max-width: 250px;
+    }
+    .groupe-form{
+        margin-bottom: 32px;
+        &--more-margin{
+            margin-bottom: 50px;
+        }
+        &__head{
+            margin-bottom: 5px;
+            font-size: 12px;
+            
+        }
+        &__input{
+            outline: none;
+            border-radius: 0;
+            display: block;
+            width: 100%;
+            border: none;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+    }
+}
+table{
+    border: none;
+}
+.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active{
+    background-color: $main_color;
+    border-color: $main_color;
+}
+.datepicker table tr td.active.active.focus, .datepicker table tr td.active.active:focus, .datepicker table tr td.active.active:hover, .datepicker table tr td.active.highlighted.active.focus, .datepicker table tr td.active.highlighted.active:focus, .datepicker table tr td.active.highlighted.active:hover, .datepicker table tr td.active.highlighted:active.focus, .datepicker table tr td.active.highlighted:active:focus, .datepicker table tr td.active.highlighted:active:hover, .datepicker table tr td.active:active.focus, .datepicker table tr td.active:active:focus, .datepicker table tr td.active:active:hover{
+    background-color: $main_color;
+    border-color: $main_color;
+}
+.datepicker.dropdown-menu{
+    z-index: 400!important;
+}
+.flex-form__side.flex-form__side--second .groupe-form__side{
+    max-width: 210px;
+}
+.select2-container{
+    display: block;
+    width: 100%!important;
+}
+
+.select2-container--default .select2-selection--single{
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    padding-left: 0;
+}
+span.select2-selection.select2-selection--single {
+    outline: none;
+}
+
+.select2-container.select2-container--open{
+    width: auto!important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background: $main_color;
+}
+.select2-container .select2-selection--single{
+    height: 30px;
+}
+.one-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    padding-top: 2px;
+    margin-bottom: 20px;
+    &--more-padd{
+        padding-top: 20px;
+    }
+    .check-style {
+        .checkbox {
+            width: 0;
+            height: 0;
+            display: block;
+            position: absolute;
+            left: -5000px;
+            top: 0;
+        }
+        label {
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 1px;
+            background: #dcdcdc;
+            position: relative;
+            cursor: pointer;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 9px;
+                height: 9px;
+                border-radius: 1px;
+                background: $main_color;
+                opacity: 0;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .checkbox:checked + label {
+        
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+    p {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+}
+
+
 .index_text {
     padding: 65px 0;
 
