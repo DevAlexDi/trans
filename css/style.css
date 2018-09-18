@@ -34,6 +34,35 @@ body {
     font-size: 12px;
     padding: 0 0;
     border-radius: 0; }
+  .but--consult {
+    position: relative;
+    width: 300px;
+    padding: 8px 25px 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    margin: 0 0 0 auto; }
+    .but--consult:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      left: 25px;
+      top: 12px;
+      background: url(../img/consult_icon.png) no-repeat; }
+    .but--consult:after {
+      content: '';
+      width: 266px;
+      height: 25px;
+      display: block;
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 50%;
+      opacity: 0.6;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      background: url(../img/consult_but_shadow.png) no-repeat; }
 
 .main-baner {
   background-image: url(../img/maner.jpg);
@@ -703,5 +732,135 @@ body {
       right: 0;
       background: center center no-repeat;
       background-size: contain; }
+
+.contacts__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+.contacts__content {
+  padding-top: 40px;
+  width: 55%; }
+  .contacts__content__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 60px 0; }
+    .contacts__content__flex__item {
+      width: 45%; }
+.contacts__address {
+  font-size: 12px;
+  position: relative;
+  padding-left: 28px; }
+  .contacts__address:before {
+    width: 13px;
+    height: 17px;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    background: url(../img/contacts_address.png) no-repeat; }
+.contacts__phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 24px; }
+  .contacts__phones:before {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 3px;
+    left: 0;
+    background: url(../img/contacts_phone.png) no-repeat; }
+  .contacts__phones a {
+    display: block;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .contacts__phones a:hover {
+      color: #ff5dca; }
+.contacts__email {
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0; }
+  .contacts__email:before {
+    width: 17px;
+    height: 13px;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 3px;
+    left: 0;
+    background: url(../img/contacts_email.png) no-repeat; }
+  .contacts__email a {
+    color: #000;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .contacts__email a:hover {
+      color: #ff5dca; }
+.contacts__show_on_map {
+  text-align: right; }
+  .contacts__show_on_map span {
+    font-size: 14px;
+    color: #767676;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .contacts__show_on_map span:hover {
+      color: #000; }
+.contacts__consult {
+  width: 70%;
+  padding: 40px 0 105px; }
+  .contacts__consult h6 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px; }
+  .contacts__consult p {
+    color: #767676;
+    font-size: 16px;
+    margin-bottom: 40px; }
+.contacts__map {
+  width: 40%;
+  position: relative;
+  margin-bottom: 120px; }
+  .contacts__map:before {
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-image: url(../img/doted.jpg);
+    position: absolute;
+    bottom: -90px;
+    left: -30%;
+    content: '';
+    display: block; }
+  .contacts__map:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 410px;
+    height: 279px;
+    background: url(../img/map_shadow.png) no-repeat;
+    left: 100%;
+    top: 100%;
+    margin-left: -370px;
+    margin-top: -228px; }
 
 /*# sourceMappingURL=style.css.map */
