@@ -60,6 +60,16 @@ $(document).ready(function () {
         $(this).find('.popular__flex__item__price_block__hid').removeClass('show');
         $(this).find('.popular__flex__item__price_block__vis').removeClass('hid');
     });
+
+    $('.open_book_modal').click(function(e) {
+        e.preventDefault();
+        $('#book').modal('show');
+    });
+
+    $('.open_agreement_modal').click(function(e) {
+        e.preventDefault();
+        $('#agreement-modal').modal('show');
+    });
 });
     
 

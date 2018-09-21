@@ -300,6 +300,10 @@
   .service_page .trip__item__route__part .arrow {
     display: none;
   }
+
+  #agreement-modal .modal-dialog {
+    width: 95%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -645,5 +649,24 @@
   }
   .service_page .trip {
     padding-bottom: 30px;
+  }
+
+  #book .modal-dialog {
+    width: 95%;
+  }
+  #book .buy_form_wrap .first-text,
+  #book .buy_form_wrap .for-padding .inputs input.tel {
+    font-size: 20px;
+  }
+
+  #agreement-modal .for-scroll h6 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #agreement-modal .modal-dialog .buy_form_wrap {
+    padding-top: 35px;
+  }
+  #agreement-modal .for-scroll {
+    padding: 0 15px 15px;
   }
 }

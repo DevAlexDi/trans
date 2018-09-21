@@ -84,7 +84,7 @@
                     <div class="main-baner__nav__flex__item main-baner__nav__flex__item--right-side">
                         <div class="telephones">
                             <div class="telephones__item--top">
-                                <span class="telephones__item__text">заказать звонок</span>
+                                <span class="telephones__item__text open_book_modal">заказать звонок</span>
                             </div>
                             <div class="telephones__item--mid">
                                 <a class="telephones__item__tel" href="#">+38 071 363 16 75</a>
@@ -525,7 +525,7 @@
 
         <div class="footer__gvd">
             <div class="main-m-w">
-                <span class="footer__gvd__politics">Политика конфиденциальности</span>
+                <span class="footer__gvd__politics open_agreement_modal">Политика конфиденциальности</span>
                 <a href="http://gvdproject.ru" target="_blank">
                     <img src="img/gvd-logo.jpg" class="img-responsive" alt="">
                     <span class="footer__gvd__des">Дизайн и разработка сайта</span>
@@ -536,9 +536,74 @@
 
     </footer>
 
+    <div class="modal" id="agreement-modal">
+        <div class="modal-dialog">
+            <div class="modal-contant">
+                <div class="modal-body">
+                    <div class="buy_form_wrap">
+                        <span class="closee" data-dismiss="modal">x</span>
+                        <div class="for-scroll">
+                            <h6>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h6>
+                            <p><strong>Введение</strong> Мы стремимся уважать информацию личного характера, касающуюся посетителей нашего сайта. В настоящей Политике конфиденциальности разъясняются некоторые из мер, которые мы предпринимаем для защиты Вашей частной жизни.</p>
+                            <p><strong>Конфиденциальность информации личного характера</strong> "Информация личного характера" обозначает любую информацию, которая может быть использована для идентификации личности, например, фамилия или адрес электронной почты.</p>
+                            <p><strong>Использование информации частного характера.</strong> Информация личного характера, полученная через наш сайт, используется нами, среди прочего, для целей регистрирования пользователей, для поддержки работы и совершенствования нашего сайта, отслеживания политики и статистики пользования сайтом, а также в целях, разрешенных вами. </p>
+                            <p><strong>Раскрытие информации частного характера.</strong> Мы нанимаем другие компании или связаны с компаниями, которые по нашему поручению предоставляют услуги, такие как обработка и доставка информации, размещение информации на данном сайте, доставка содержания и услуг, предоставляемых настоящим сайтом, выполнение статистического анализа. Чтобы эти компании могли предоставлять эти услуги, мы можем сообщать им информацию личного характера, однако им будет разрешено получать только ту информацию личного характера, которая необходима им для предоставления услуг. Они обязаны соблюдать конфиденциальность этой информации, и им запрещено использовать ее в иных целях.</p>
+                            <p>Мы можем использовать или раскрывать Ваши личные данные и по иным причинам, в том числе, если мы считаем, что это необходимо в целях выполнения требований закона или решений суда, для защиты наших прав или собственности, защиты личной безопасности пользователей нашего сайта или представителей широкой общественности, в целях расследования или принятия мер в отношении незаконной или предполагаемой незаконной деятельности, в связи с корпоративными сделками, такими как разукрупнение, слияние, консолидация, продажа активов или в маловероятном случае банкротства, или в иных целях в соответствии с Вашим согласием.</p>
+                            <p>Мы не будем продавать, предоставлять на правах аренды или лизинга наши списки пользователей с адресами электронной почты третьим сторонам.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="thanks_modal">
+        <div class="modal-dialog">
+            <div class="modal-contant">
+                <div class="modal-body">
+                    <div class="buy_form_wrap">
+                        <span class="closee" data-dismiss="modal">x</span>
+                        <div class="for-scroll">
+                            <h6>Спасибо!</h6>
+                            <p>Ваша заявка была принята и будет рассмотрена в ближайшее время.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
+    <div class="modal" id="book" >
+        <div class="modal-dialog">
+            <div class="modal-contant">
+                <div class="modal-body">
+                    <div class="buy_form_wrap">
+                        <form method="post" class="mail_to">
+                            <p class="first-text">Заказать звонок</p>
+                            <div class="for-padding">
+                                <div class="inputs">
+                                    <div class="for-flex-two">
+                                        <div class="for-w">
+                                            <input type="text" placeholder="ВАШЕ ИМЯ" class="name" name="name">
+                                        </div>
+                                    </div>
+                                    <input type="text" placeholder="+7 (" class="tel tel-mask" name="phone">
+                                </div>
+                                <div class="one-checkbox ">
+                                    <div class="check-style">
+                                        <input type="checkbox" class="checkbox" name="" id="checkbox-6">
+                                        <label for="checkbox-6"></label>
+                                    </div>
+                                    <p>Вы соглашаетесь с условиями обработки персональных данных (<span class="open_agreement_modal">ознакомиться</span>)</p>
+                                </div>
+                                <button type="submit" class="but but--news">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
