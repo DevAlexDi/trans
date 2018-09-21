@@ -130,44 +130,193 @@
         <div class="main-m-w">
             <ul>
                 <li><a href="#">Главная</a></li>
-                <li><span>Контакты</span></li>
+                <li><a href="#">Услуги</a></li>
+                <li><span>Трансфер</span></li>
             </ul>
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="service_page">
         <div class="main-m-w">
-            <div class="contacts__flex">
-                <div class="contacts__content">
-                    <h1 class="zag">Контакты</h1>
-                    <div class="contacts__content__flex">
-                        <div class="contacts__content__flex__item">
-                            <p class="contacts__address">г. Донецк, ул. Университетская, дом 4, эт. 4 офис 411</p>
-                            <div class="contacts__phones">
-                                <a href="tel:">+38 071 363 16 75</a>
-                                <a href="tel:">+38 095 701 79 66</a>
+            <h1 class="zag">Трансфер</h1>
+            <form class="flex-form">
+                <div class="flex-form__side flex-form__side--first">
+                    <div class="uniq-row">
+                        <div class="groupe-form__side">
+                            <div class="groupe-form">
+                                <p class="groupe-form__head">Откуда:</p>
+                                <select class="groupe-form__select" id="first-sel" name="sity" >
+                                    <option value="0">Донецк</option>
+                                    <option value="1">Ростов-на-дону</option>
+                                </select>
                             </div>
-                            <p class="contacts__email"><a href="mailto:">Hello@yandex.ru</a></p>
-                            <p class="contacts__show_on_map"><span data-lat="47.999354" data-lon="37.798691">На карте</span></p>
+
                         </div>
-                        <div class="contacts__content__flex__item">
-                            <p class="contacts__address">г. Ростов-на-Дону, ул. Университетская, дом 4, эт. 4 офис 411</p>
-                            <div class="contacts__phones">
-                                <a href="tel:">+7 999 235 16 75</a>
-                                <a href="tel:">+7 999 701 79 66</a>
+                        <div class="swipe">
+                            <img src="img/swipe-val.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="groupe-form__side">
+                            <div class="groupe-form">
+                                <p class="groupe-form__head">Куда:</p>
+                                <select class="groupe-form__select" id="second-sel" name="sity-2">
+                                    <option value="0">Донецк</option>
+                                    <option value="1" selected>Ростов-на-дону</option>
+
+                                </select>
                             </div>
-                            <p class="contacts__email"><a href="mailto:">Hello@yandex.ru</a></p>
-                            <p class="contacts__show_on_map"><span data-lat="47.220034" data-lon="39.694298">На карте</span></p>
+
                         </div>
                     </div>
-                    <div class="contacts__consult">
-                        <h6>Мы всегда заботимся о своих клиентах</h6>
-                        <p>Если у Вас возникли вопросы или нужна наша помощь, мы всегда рады будем Вас проконсультировать и помочь в решении Вашей проблемы.</p>
-                        <button class="but but--consult">Получить консультацию</button>
+                    <div class="groupe-form__side">
+
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">ФИО</p>
+                            <input class="groupe-form__input" type="text" placeholder="Введите данные">
+                        </div>
+                    </div>
+
+                    <div class="groupe-form__side">
+
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">Телефон</p>
+                            <input class="groupe-form__input" type="text" placeholder="+">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="flex-form__side flex-form__side--second">
+                    <div class="groupe-form__side">
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">Дата</p>
+                            <input class="groupe-form__input date-inp-init" type="text" >
+
+                        </div>
+                        <div class="groupe-form for-hide hidden">
+                            <p class="groupe-form__head">Дата обратно</p>
+                            <input class="groupe-form__input date-inp-init" type="text" >
+
+                        </div>
+                        <div class="one-checkbox one-checkbox--more-padd">
+                            <div class="check-style">
+                                <input type="checkbox" class="checkbox" name="" id="checkbox-1">
+                                <label for="checkbox-1"></label>
+                            </div>
+                            <p>Пеший переход границы</p>
+                        </div>
+                    </div>
+                    <div class="groupe-form__side">
+                        <div class="groupe-form">
+                            <p class="groupe-form__head">Количество мест:</p>
+                            <select class="groupe-form__select" id="count-pass" name="count">
+                                <option value="">1 пассажир</option>
+                                <option value="">2 пассажира</option>
+                            </select>
+                        </div>
+                        <div class="groupe-form for-hide hidden">
+                            <p class="groupe-form__head">Количество мест обратно:</p>
+                            <select class="groupe-form__select" id="count-pass-2" name="count-2">
+                                <option value="">1 пассажир</option>
+                                <option value="">2 пассажира</option>
+                            </select>
+                        </div>
+                        <div class="one-checkbox one-checkbox--more-padd">
+                            <div class="check-style">
+                                <input type="checkbox" class="checkbox" name="" id="checkbox-2">
+                                <label for="checkbox-2"></label>
+                            </div>
+                            <p>Бронь билета в обе стороны</p>
+                        </div>
                     </div>
                 </div>
-                <div class="contacts__map" id="map"></div>
+                <div class="flex-form__side flex-form__side--submit">
+                    <div class="image">
+
+                    </div>
+                    <div class="flex-check">
+                        <div class="one-checkbox">
+                            <div class="check-style">
+                                <input class="type-car" type="checkbox" checked class="checkbox" name="" id="checkbox-3">
+                                <label for="checkbox-3"></label>
+                            </div>
+                            <p>Легковой автомобиль</p>
+                        </div>
+                        <div class="one-checkbox">
+                            <div class="check-style">
+                                <input class="type-car" type="checkbox" class="checkbox" name="" id="checkbox-4">
+                                <label for="checkbox-4"></label>
+                            </div>
+                            <p>Микроавтобус</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="send-form but">Найти рейсы</button>
+                </div>
+            </form>
+            <h2 class="zag zag--small">Найдено 4 рейса</h2>
+            <div class="trip">
+                <div class="trip__item">
+                    <div class="trip__item__grey">
+
+                    </div>
+                    <div class="trip__item__white">
+                        <div class="popular__flex__item__body">
+                            <div class="popular__flex__item__body__part">
+                                <p class="popular__flex__item__body__part__opt popular__flex__item__body__part__opt--route">
+                                    <span>Расстояние:</span> 210 км
+                                </p>
+                                <p class="popular__flex__item__body__part__opt popular__flex__item__body__part__opt--avto">
+                                    <span>Транспорт:</span> Легковая машина 4 места
+                                </p>
+                            </div>
+                            <div class="popular__flex__item__body__part">
+                                <p class="popular__flex__item__body__part__opt popular__flex__item__body__part__opt--time">
+                                    <span>Время в пути:</span> 04:00 ч
+                                </p>
+                                <p class="popular__flex__item__body__part__opt popular__flex__item__body__part__opt--from">
+                                    <span>Отправление:</span> Южный АВ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trip__item__siren">
+
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="special_form_sec">
+        <div class="main-m-w">
+            <div class="special_form_sec__flex">
+                <div class="special_form_sec__flex__left">
+                    <img src="img/spec_form_avto.png" alt="" class="img-responsive">
+                </div>
+                <div class="special_form_sec__flex__right">
+                    <h6>Специальные условия</h6>
+                    <p>При заказе от трех билетов действует специальное предложение. Оставьте свои данные, и мы Вам перезвоним!</p>
+                    <form action="">
+                        <div class="special_form_sec__flex__right__inputs">
+                            <input type="text" placeholder="Как вас зовут?" name="name">
+                            <div class="special_form_sec__flex__right__input_sm">
+                                <input type="text" placeholder="Ваш телефон" name="phone">
+                            </div>
+                        </div>
+                        <button type="submit" class="but">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="index_text">
+        <div class="main-m-w">
+            <h1>Пассажирские перевозки ДНР — Россия</h1>
+            <p>Услуги пассажирских перевозок по России пользуются большой популярностью у жителей Донецка. Поэтому мы предлагает вам осуществить поездку из ДНР в любые города России вместе с нами! Мы постарались охватить самые популярные направления, а также создать лучшие условия, чтобы каждая поездка для вас была максимально комфортабельной. Автобусные перевозки осуществляются из Донецка, а  также Макеевки, Харцызска, Шахтерска, Тореза, Горловки и т.д Безопасные и быстрые поездки с конечной точкой: Москва, Севастополь, Волгоград,Ростов, Тула, Воронеж, Краснодар, Белгород, Вологда, Питер, Таганрог, Сочи, Адлер, Тамбов, Пенза, Нижний Новгород, Смоленск и многие другие направления.</p>
+            <p>Также принимает заявки на обратные поездки из России в Донецк, просто забронируйте билеты на нужную вам дату и время на сайте и в течении 30 мин. с вами свяжется диспетчер.</p>
+            <h2>Безопасные и комфортабельные поездки в Россию</h2>
+            <p>Пассажирские перевозки с «Империал Авто» — это всегда надежно и безопасно! Наша команда состоит из лучших перевозчиков, которые всегда заботятся о комфорте пассажиров, и имеют все необходимые международные лицензии, подтверждающие это. Все автобусы покидают Донецк в четко установленное время, соблюдая назначенный маршрут и график, указанный на сайте. . Стоимость поездки в разных направлениях, представлена на нашем сайте, для уточнения деталей, воспользуйтесь контактным номером. Наши операторы готовы предоставить вам всю необходимую информацию и ответить на волнующие вас вопросы, а также помочь забронировать места на день отъезда.</p>
+            <p>Ознакомившись с нашим сайтом, вы найдете детальную информацию обо всех маршрутах, расписание автобусов из Донецка ( Макеевки, Харцызска, Шахтерска, Тореза, Горловки), а также обратно, из России в Донецк. «Империал Авто» – это регулярные пассажирские перевозки, на комфортабельных автобусах, с Wi-Fi и приятными скидками на поездки с детьми. Гарантируем, что время, проведенное в дороге, пролетит для вас незаметно!</p>
         </div>
     </section>
 
@@ -293,8 +442,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="js/contacts.js"></script>
+    <script src="js/scripts.js"></script>
+   
 </body>
 
 </html>

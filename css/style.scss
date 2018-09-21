@@ -39,6 +39,11 @@ body{
         width: 230px;
         padding: 7px 0;
         margin: auto;
+
+        &--big {
+            margin: auto 0 auto 75%;
+            transform: translateX(-50%);
+        }
     }
 
     &--footer {
@@ -356,6 +361,10 @@ body{
     span {
         display: block;
         color: $main_color;
+    }
+
+    &--small {
+        font-size: 16px;
     }
 }
 
@@ -750,13 +759,26 @@ span.select2-selection.select2-selection--single {
 .news {
     padding-bottom: 60px;
 
+    &--page {
+        padding-top: 20px;
+    }
+
     &__flex {
         display: flex;
         justify-content: space-between;
 
+        &--all {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
         &__item {
             width: 32%;
             margin-top: 25px;
+
+            &--all {
+                margin: 25px 0.665% 0;
+            }
 
             &__img_block {
                 position: relative;
@@ -767,6 +789,12 @@ span.select2-selection.select2-selection--single {
                     content: '';
                     display: block;
                     padding-top: 56%;
+                }
+
+                &--big {
+                    &:before {
+                        padding-top: 27.3%;
+                    }
                 }
 
                 &__img {
@@ -792,6 +820,14 @@ span.select2-selection.select2-selection--single {
                 font-size: 12px;
                 text-align: justify;
                 margin: 0 0 45px;
+            }
+
+            &--big {
+                width: 65.3%;
+
+                a {
+                    width: 50%;
+                }
             }
         }
     }
@@ -1271,6 +1307,42 @@ span.select2-selection.select2-selection--single {
             top: 100%;
             margin-left: -370px;
             margin-top: -228px;
+        }
+    }
+}
+
+.service_page {
+    h1 {
+        margin: 20px 0;
+    }
+
+    form {
+        margin-bottom: 40px;
+    }
+
+    .trip {
+        padding-bottom: 90px;
+
+        &__item {
+            display: flex;
+
+            &__grey {
+                background: #e8e8e8;
+                width: 40%;
+            }
+
+            &__white {
+                width: 30%;
+
+                .popular__flex__item__body__part__opt:before {
+                    background-image: url(../img/trip_icons.png);
+                }
+            }
+
+            &__siren {
+                width: 30%;
+                background: #a74288;
+            }
         }
     }
 }

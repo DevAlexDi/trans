@@ -430,6 +430,17 @@
     margin-bottom: 15px;
   }
 
+  .news__flex__item__img_block--big:before {
+    padding-top: 56%;
+  }
+  .news__flex__item--big a {
+    width: 100%;
+  }
+  .but--news--big {
+    margin: auto;
+    transform: none;
+  }
+
   .prefoot__flex {
     display: block;
   }
