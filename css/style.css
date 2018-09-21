@@ -319,7 +319,8 @@ body {
       width: 32%; }
       .popular__flex__item__head {
         position: relative;
-        overflow: hidden; }
+        overflow: hidden;
+        cursor: pointer; }
       .popular__flex__item__route {
         width: 64%;
         font-size: 17px;
@@ -356,14 +357,26 @@ body {
         background: linear-gradient(-185deg, #ff5dca, #a74288);
         -webkit-transform: skew(-45deg) translateX(-62.5px);
                 transform: skew(-45deg) translateX(-62.5px); }
-        .popular__flex__item__price_block__vis {
+        .popular__flex__item__price_block__flex_wrap {
           -webkit-transform: skew(45deg);
                   transform: skew(45deg);
           margin: auto 0 auto 62px;
+          position: relative;
           width: 100%;
-          color: #fff; }
+          height: 100%; }
+        .popular__flex__item__price_block__vis {
+          width: 100%;
+          color: #fff;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          position: absolute;
+          bottom: 50%;
+          -webkit-transform: translateY(50%);
+                  transform: translateY(50%); }
           .popular__flex__item__price_block__vis small {
             font-size: 8px; }
+          .popular__flex__item__price_block__vis.hid {
+            bottom: 200%; }
         .popular__flex__item__price_block__rub {
           font-size: 50px;
           font-weight: 700;
@@ -376,6 +389,18 @@ body {
           font-weight: 700;
           line-height: 1.0;
           margin: 0; }
+        .popular__flex__item__price_block__hid {
+          cursor: pointer;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 700;
+          bottom: -100%;
+          margin-bottom: -13.5px;
+          position: absolute;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+          .popular__flex__item__price_block__hid.show {
+            bottom: 50%; }
       .popular__flex__item__body {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -464,9 +489,15 @@ body {
         margin-bottom: 15px;
         width: 100%;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: left center;
         background-size: contain;
         background-image: url(../img/car-car.jpg); }
+        .flex-form__side--submit .image--bus {
+          background-position: right center;
+          background-image: url(../img/car-bus.png); }
+        .flex-form__side--submit .image--both {
+          background-position: center;
+          background-image: url(../img/car-both.png); }
 
 .flex-check {
   display: -webkit-box;
@@ -1087,20 +1118,113 @@ span.select2-selection.select2-selection--single {
 .service_page form {
   margin-bottom: 40px; }
 .service_page .trip {
-  padding-bottom: 90px; }
+  padding-bottom: 90px;
+  overflow: hidden; }
   .service_page .trip__item {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 20px; }
     .service_page .trip__item__grey {
       background: #e8e8e8;
-      width: 40%; }
+      width: 45%;
+      -webkit-transform: skew(20deg);
+              transform: skew(20deg);
+      margin-left: -35px; }
+      .service_page .trip__item__grey__transform {
+        margin: 0 0 0 55px;
+        -webkit-transform: skew(-20deg);
+                transform: skew(-20deg); }
+    .service_page .trip__item__route {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 20px 0; }
+      .service_page .trip__item__route__part {
+        width: 50%;
+        position: relative; }
+        .service_page .trip__item__route__part .arrow {
+          width: 45%;
+          position: absolute;
+          top: 6px;
+          right: 10%; }
+    .service_page .trip__item__time {
+      position: relative;
+      font-size: 18px;
+      font-weight: 700;
+      padding-right: 30px;
+      display: inline-block;
+      margin-bottom: 10px; }
+      .service_page .trip__item__time:after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 26px;
+        top: -6px;
+        right: 0;
+        background: url(../img/trip_route_icon.png) no-repeat; }
+    .service_page .trip__item__dnw {
+      font-size: 14px; }
+      .service_page .trip__item__dnw span {
+        color: #7e7e7e;
+        display: block; }
     .service_page .trip__item__white {
-      width: 30%; }
+      width: 33%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .service_page .trip__item__white .popular__flex__item__body {
+        margin: auto; }
+      .service_page .trip__item__white .popular__flex__item__body__part {
+        width: 55%; }
+        .service_page .trip__item__white .popular__flex__item__body__part:last-child {
+          width: 40%; }
+      .service_page .trip__item__white .popular__flex__item__body__part__opt:first-child {
+        margin-top: 0; }
       .service_page .trip__item__white .popular__flex__item__body__part__opt:before {
         background-image: url(../img/trip_icons.png); }
     .service_page .trip__item__siren {
-      width: 30%;
-      background: #a74288; }
+      width: 22%;
+      background: #a74288;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transform: skew(20deg);
+              transform: skew(20deg);
+      margin-right: -30px;
+      cursor: pointer; }
+      .service_page .trip__item__siren__transform {
+        width: 157px;
+        margin: auto;
+        -webkit-transform: skew(-20deg);
+                transform: skew(-20deg); }
+    .service_page .trip__item__price {
+      color: #fff;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 700; }
+      .service_page .trip__item__price span {
+        font-size: 16px; }
+      .service_page .trip__item__price:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 19px;
+        height: 19px;
+        background: url(../img/trip_ticket_icon.png) no-repeat;
+        top: 9px;
+        right: 25px; }
+    .service_page .trip__item__order {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */

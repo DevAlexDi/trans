@@ -382,6 +382,7 @@ body{
             &__head {
                 position: relative;
                 overflow: hidden;
+                cursor: pointer;
             }
 
             &__route {
@@ -423,14 +424,28 @@ body{
                 background: linear-gradient(-185deg, $main_color, #a74288);
                 transform: skew(-45deg) translateX(-62.5px);
 
-                &__vis {
+                &__flex_wrap {
                     transform: skew(45deg);
                     margin: auto 0 auto 62px;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__vis {
                     width: 100%;
                     color: #fff;
+                    transition: 0.3s;
+                    position: absolute;
+                    bottom: 50%;
+                    transform: translateY(50%);
 
                     small {
                         font-size: 8px;
+                    }
+
+                    &.hid {
+                        bottom: 200%;
                     }
                 }
 
@@ -448,6 +463,20 @@ body{
                     @include bold_font(11px);
                     line-height: 1.0;
                     margin: 0;
+                }
+
+                &__hid {
+                    cursor: pointer;
+                    color: #fff;
+                    @include bold_font(18px);
+                    bottom: -100%;
+                    margin-bottom: -13.5px;
+                    position: absolute;
+                    transition: 0.3s;
+
+                    &.show {
+                        bottom: 50%;
+                    }
                 }
             }
 
@@ -550,9 +579,19 @@ body{
                 margin-bottom: 15px;
                 width: 100%;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: left center;
                 background-size: contain;
                 background-image: url(../img/car-car.jpg);
+
+                &--bus {
+                    background-position: right center;
+                    background-image: url(../img/car-bus.png);
+                }
+
+                &--both {
+                    background-position: center;
+                    background-image: url(../img/car-both.png);
+                }
             }
         }
     }
@@ -1322,26 +1361,133 @@ span.select2-selection.select2-selection--single {
 
     .trip {
         padding-bottom: 90px;
+        overflow: hidden;
 
         &__item {
             display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
 
             &__grey {
                 background: #e8e8e8;
-                width: 40%;
+                width: 45%;
+                transform: skew(20deg);
+                margin-left: -35px;
+
+                &__transform {
+                    margin: 0 0 0 55px;
+                    transform: skew(-20deg);
+                }
+            }
+
+            &__route {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0;
+
+                &__part {
+                    width: 50%;
+                    position: relative;
+
+                    .arrow {
+                        width: 45%;
+                        position: absolute;
+                        top: 6px;
+                        right: 10%;
+                    }
+                }
+            }
+
+            &__time {
+                position: relative;
+                @include bold_font(18px);
+                padding-right: 30px;
+                display: inline-block;
+                margin-bottom: 10px;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 20px;
+                    height: 26px;
+                    top: -6px;
+                    right: 0;
+                    background: url(../img/trip_route_icon.png) no-repeat;
+                }
+            }
+
+            &__dnw {
+                font-size: 14px;
+
+                span {
+                    color: #7e7e7e;
+                    display: block;
+                }
             }
 
             &__white {
-                width: 30%;
+                width: 33%;
+                display: flex;
 
+                .popular__flex__item__body {
+                    margin: auto;
+                }
+                .popular__flex__item__body__part {
+                    width: 55%;
+
+                    &:last-child {
+                        width: 40%;
+                    }
+                }
+                .popular__flex__item__body__part__opt:first-child {
+                    margin-top: 0;
+                }
                 .popular__flex__item__body__part__opt:before {
                     background-image: url(../img/trip_icons.png);
                 }
             }
 
             &__siren {
-                width: 30%;
+                width: 22%;
                 background: #a74288;
+                display: flex;
+                transform: skew(20deg);
+                margin-right: -30px;
+                cursor: pointer;
+
+                &__transform {
+                    width: 157px;
+                    margin: auto;
+                    transform: skew(-20deg);
+                }
+            }
+
+            &__price {
+                color: #fff;
+                position: relative;
+                text-transform: uppercase;
+                @include bold_font(24px);
+
+                span {
+                    font-size: 16px;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    width: 19px;
+                    height: 19px;
+                    background: url(../img/trip_ticket_icon.png) no-repeat;
+                    top: 9px;
+                    right: 25px;
+                }
+            }
+
+            &__order {
+                color: #fff;
+                text-transform: uppercase;
+                @include bold_font(16px);
             }
         }
     }

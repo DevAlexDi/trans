@@ -5,24 +5,37 @@
   .popular__flex__item__price_block__rub {
     font-size: 40px; }
 
-  .flex-form {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+  /*.flex-form{
+      flex-wrap: wrap;
+  }
+  .flex-form__side--first{
+      width: 45%;
+  }
+  .flex-form__side--second{
+      width: 45%;
+     
+  }
+  
+  .flex-form__side.flex-form__side--second .groupe-form__side{
+      max-width: 250px;
+  }
+  .flex-form__side--submit{
+      margin: 0 auto;
+  }*/
+  .flex-form__side.flex-form__side--second .groupe-form__side {
+    width: 45%; }
 
   .flex-form__side--first {
-    width: 45%; }
-
-  .flex-form__side--second {
-    width: 45%; }
-
-  .flex-form__side.flex-form__side--second .groupe-form__side {
-    max-width: 250px; }
-
-  .flex-form__side--submit {
-    margin: 0 auto; }
+    width: 43%; }
 
   .contacts__phones {
     display: block; } }
+@media (max-width: 1400px) {
+  .popular__flex__item__price_block__hid {
+    font-size: 15px; }
+
+  .flex-form__side .groupe-form__side {
+    max-width: 220px; } }
 @media (max-width: 1350px) {
   .telephones__item--mid, .telephones__item__tel {
     display: block; }
@@ -30,27 +43,32 @@
   .telephones {
     width: 175px; }
 
-  .flex-form__side--first {
-    width: 48%; }
-
-  .flex-form__side--second {
-    width: 48%; } }
+  /*.flex-form__side--first{
+      width: 48%;
+  }
+  .flex-form__side--second{
+      width: 48%;
+     
+  }*/ }
 @media (max-width: 1300px) {
-  .popular__flex__item__price_block__vis {
-    margin-left: 45px; }
-
   .popular__flex__item__body__part__opt span {
-    display: block; } }
-@media (max-width: 1250px) {
-  .flex-form {
-    max-width: 600px;
-    margin: 0 auto; }
+    display: block; }
 
   .flex-form__side--first {
-    width: 100%; }
-
-  .flex-form__side--second {
-    width: 100%; } }
+    width: 40%; }
+    .flex-form__side--first .groupe-form__side {
+      max-width: 200px; } }
+@media (max-width: 1250px) {
+  /*.flex-form{
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  .flex-form__side--first{
+      width: 100%;
+  }
+  .flex-form__side--second{
+      width: 100%;
+  }*/ }
 @media (max-width: 1199px) {
   .main-baner__nav__flex {
     -ms-flex-wrap: wrap;
@@ -123,7 +141,39 @@
     padding: 0 0 50px; }
 
   .contacts__map:before {
-    display: none; } }
+    display: none; }
+
+  .service_page .trip__item__dnw {
+    font-size: 12px; }
+
+  .service_page .popular__flex__item__body__part__opt:first-child {
+    margin-top: 0; }
+
+  .service_page .trip__item__order {
+    font-size: 14px; }
+
+  .popular__flex__item__price_block__hid {
+    margin-left: -20px;
+    font-size: 12px; }
+
+  .flex-form {
+    max-width: 600px;
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .flex-form__side--first {
+    width: 100%; }
+
+  .flex-form__side--second {
+    width: 100%; }
+
+  .flex-form__side .groupe-form__side,
+  .flex-form__side.flex-form__side--second .groupe-form__side {
+    max-width: 250px; }
+
+  .flex-form__side--submit {
+    margin: 0 auto; } }
 @media (max-width: 991px) {
   .special_form_sec__flex {
     display: block; }
@@ -148,10 +198,14 @@
 
   .popular__flex__item__price_block__vis {
     margin-left: 50%;
-    -webkit-transform: skew(45deg) translateX(-50%);
-            transform: skew(45deg) translateX(-50%); }
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%); }
     .popular__flex__item__price_block__vis small {
       font-size: 12px; }
+
+  .popular__flex__item__price_block__hid {
+    margin-left: 0;
+    font-size: 18px; }
 
   .popular__flex__item__price_block__rub {
     font-size: 50px; }
@@ -203,7 +257,29 @@
   .contacts__map {
     width: 100%;
     height: 400px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .service_page .trip__item__white .popular__flex__item__body {
+    display: block; }
+
+  .service_page .trip__item__white {
+    width: 25%; }
+
+  .service_page .popular__flex__item__body__part {
+    width: 100%; }
+
+  .service_page .popular__flex__item__body__part__opt {
+    margin: 5px 0 !important; }
+
+  .service_page .trip__item__siren {
+    width: 25%; }
+
+  .service_page .trip__item__order {
+    font-size: 12px;
+    padding-left: 10px; }
+
+  .service_page .trip__item__route__part .arrow {
+    display: none; } }
 @media (max-width: 767px) {
   .flex-form__side--first .uniq-row {
     display: block; }
@@ -223,7 +299,8 @@
     display: block; }
 
   .flex-form__side.flex-form__side--second .groupe-form__side {
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
 
   .one-checkbox--more-padd {
     padding-top: 0; }
@@ -351,12 +428,23 @@
     left: 0;
     width: 100%; }
 
+  .popular__flex__item__price_block__flex_wrap {
+    -webkit-transform: none;
+            transform: none;
+    margin-left: 0; }
+
   .popular__flex__item__price_block__vis {
     margin-left: 0;
     -webkit-transform: none;
             transform: none;
     text-align: center;
-    padding: 10px 0 15px; }
+    padding: 10px 0 15px;
+    position: relative; }
+
+  .popular__flex__item__price_block__hid {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center; }
 
   .zag {
     font-size: 24px; }
@@ -467,6 +555,43 @@
     margin-bottom: 20px; }
 
   .contacts__map:after {
-    display: none; } }
+    display: none; }
+
+  .service_page .trip__item {
+    display: block; }
+
+  .service_page .trip__item__grey,
+  .service_page .trip__item__white,
+  .service_page .trip__item__siren {
+    width: 100%;
+    -webkit-transform: none;
+            transform: none;
+    margin: 0; }
+
+  .service_page .trip__item__grey__transform {
+    -webkit-transform: none;
+            transform: none;
+    margin: 0; }
+
+  .service_page .trip__item__route {
+    padding: 20px 15px; }
+
+  .service_page .trip__item__route__part {
+    width: 43%; }
+
+  .service_page .popular__flex__item__body__part__opt {
+    margin: 10px 0 !important; }
+
+  .service_page .trip__item__siren__transform {
+    -webkit-transform: none;
+            transform: none;
+    padding: 20px 0; }
+
+  .service_page .trip__item__order {
+    font-size: 16px;
+    padding-left: 0; }
+
+  .service_page .trip {
+    padding-bottom: 30px; } }
 
 /*# sourceMappingURL=media.css.map */

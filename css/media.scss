@@ -6,7 +6,7 @@
     font-size: 40px;
   }
 
-    .flex-form{
+    /*.flex-form{
         flex-wrap: wrap;
     }
     .flex-form__side--first{
@@ -22,10 +22,29 @@
     }
     .flex-form__side--submit{
         margin: 0 auto;
-    }
+    }*/
+
+  .flex-form__side.flex-form__side--second .groupe-form__side {
+    width: 45%;
+  }
+  .flex-form__side--first {
+    width: 43%;
+  }
   .contacts__phones {
     display: block;
   }
+
+}
+
+@media (max-width: 1400px) {
+  .popular__flex__item__price_block__hid {
+    font-size: 15px;
+  }
+
+  .flex-form__side .groupe-form__side {
+    max-width: 220px;
+  }
+
 
 }
 
@@ -36,30 +55,31 @@
   .telephones {
     width: 175px;
   }
-    .flex-form__side--first{
+    /*.flex-form__side--first{
         width: 48%;
     }
     .flex-form__side--second{
         width: 48%;
        
-    }
-    
-    
+    }*/
     
     
 }
 
 @media (max-width: 1300px) {
-  .popular__flex__item__price_block__vis {
-    margin-left: 45px;
-  }
   .popular__flex__item__body__part__opt span {
     display: block;
+  }
+  .flex-form__side--first {
+    width: 40%;
+    .groupe-form__side {
+      max-width: 200px;
+    }
   }
 }
 
 @media (max-width: 1250px) {
-    .flex-form{
+    /*.flex-form{
         max-width: 600px;
         margin: 0 auto;
     }
@@ -68,7 +88,7 @@
     }
     .flex-form__side--second{
         width: 100%;
-    }
+    }*/
 }
 
 @media (max-width: 1199px) {
@@ -135,6 +155,40 @@
       display: none;
     }
   }
+
+  .service_page .trip__item__dnw {
+    font-size: 12px;
+  }
+  .service_page .popular__flex__item__body__part__opt:first-child {
+    margin-top: 0;
+  }
+  .service_page .trip__item__order {
+    font-size: 14px;
+  }
+
+  .popular__flex__item__price_block__hid {
+    margin-left: -20px;
+    font-size: 12px;
+  }
+
+  .flex-form{
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .flex-form__side--first{
+    width: 100%;
+  }
+  .flex-form__side--second{
+    width: 100%;
+  }
+  .flex-form__side .groupe-form__side,
+  .flex-form__side.flex-form__side--second .groupe-form__side {
+    max-width: 250px;
+  }
+  .flex-form__side--submit{
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 991px) {
@@ -161,11 +215,15 @@
   }
   .popular__flex__item__price_block__vis {
     margin-left: 50%;
-    transform: skew(45deg) translateX(-50%);
+    transform: translate(-50%, 50%);
 
     small {
       font-size: 12px;
     }
+  }
+  .popular__flex__item__price_block__hid {
+    margin-left: 0;
+    font-size: 18px;
   }
   .popular__flex__item__price_block__rub {
     font-size: 50px;
@@ -219,6 +277,29 @@
     height: 400px;
     margin-bottom: 30px;
   }
+
+  .service_page .trip__item__white .popular__flex__item__body {
+    display: block;
+  }
+  .service_page .trip__item__white {
+    width: 25%;
+  }
+  .service_page .popular__flex__item__body__part {
+    width: 100%;
+  }
+  .service_page .popular__flex__item__body__part__opt {
+    margin: 5px 0!important;
+  }
+  .service_page .trip__item__siren {
+    width: 25%;
+  }
+  .service_page .trip__item__order {
+    font-size: 12px;
+    padding-left: 10px;
+  }
+  .service_page .trip__item__route__part .arrow {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -241,6 +322,7 @@
     }
     .flex-form__side.flex-form__side--second .groupe-form__side{
         max-width: 100%;
+        width: 100%;
     }
     
     .one-checkbox--more-padd{
@@ -388,11 +470,21 @@
     left: 0;
     width: 100%;
   }
+  .popular__flex__item__price_block__flex_wrap {
+    transform: none;
+    margin-left: 0;
+  }
   .popular__flex__item__price_block__vis {
     margin-left: 0;
     transform: none;
     text-align: center;
     padding: 10px 0 15px;
+    position: relative;
+  }
+  .popular__flex__item__price_block__hid {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .zag {
@@ -517,5 +609,41 @@
     &:after {
       display: none;
     }
+  }
+
+  .service_page .trip__item {
+    display: block;
+  }
+  .service_page .trip__item__grey,
+  .service_page .trip__item__white,
+  .service_page .trip__item__siren
+  {
+    width: 100%;
+    transform: none;
+    margin: 0;
+  }
+  .service_page .trip__item__grey__transform {
+    transform: none;
+    margin: 0;
+  }
+  .service_page .trip__item__route {
+    padding: 20px 15px;
+  }
+  .service_page .trip__item__route__part {
+    width: 43%;
+  }
+  .service_page .popular__flex__item__body__part__opt {
+    margin: 10px 0!important;
+  }
+  .service_page .trip__item__siren__transform {
+    transform: none;
+    padding: 20px 0;
+  }
+  .service_page .trip__item__order {
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .service_page .trip {
+    padding-bottom: 30px;
   }
 }
